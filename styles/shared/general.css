@@ -49,19 +49,21 @@ select:focus {
 
 .button-secondary {
   color: rgb(33, 33, 33);
-  background: white;
+  background: lightcyan;
   border: 1px solid #D5D9D9;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  border-color: lightcyan;
 }
 
 .button-secondary:hover {
-  background-color: #F7FAFA;
+  background-color: lightblue;
+  border-color: lightblue;
 }
 
 .button-secondary:active {
-  background-color: #EDFDFF;
+  background-color: lightblue;
   box-shadow: none;
 }
 

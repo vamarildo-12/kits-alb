@@ -19,7 +19,7 @@
     <!-- Our custom CSS for this page. -->
     <link rel="stylesheet" href="styles/shared/general.css">
     <link rel="stylesheet" href="styles/shared/kits-header.css">
-    <link rel="stylesheet" href="styles/pages/kits.css">
+    <link rel="stylesheet" href="styles/pages/catalog.css">
   </head>
   <body>
     <header class="js-kits-header kits-header"></header>

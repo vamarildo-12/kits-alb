@@ -173,8 +173,21 @@ main {
   transition: none;
 }
 
-.products-grid .add-to-cart-button {
+.products-grid .add-to-cart-button,
+.view-product-button
+ {
   width: 100%;
   padding: 8px;
   border-radius: 50px;
+  font-weight: bold;
 }
+
+.products-grid .view-product-button{
+  margin-bottom: 10px;
+  
+}
+
+/* .view-product-button :hover {
+  background-color: green; 
+  border-color: green; 
+} */

@@ -90,11 +90,20 @@ export class ProductsGrid extends ComponentV2 {
             Added
           </div>
 
+          <button class="js-view-product-button
+            view-product-button button-secondary"
+            data-testid="view-product-button">
+            View Product
+          </button>
+
           <button class="js-add-to-cart-button
             add-to-cart-button button-primary"
             data-testid="add-to-cart-button">
             Add to Cart
           </button>
+
+          
+
         </div>
       `;
     });

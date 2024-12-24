@@ -16,8 +16,8 @@
         <div class="password-reset-container">
             <h1>Reset Password</h1>
             <form action="process_passwordreset.php" method="POST">
-                <label for="email">Email or mobile phone number</label>
-                <input type="text" id="email" name="email" required placeholder="Enter your email or phone number" oninput="validateEmailOrPhone()">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required placeholder="Enter your email" oninput="validateEmail()">
                 <button type="submit">Continue</button>
                 <p class="confirmation-msg"><?php echo $confirmation ?? ''; ?></p>
             </form>
@@ -27,7 +27,7 @@
         </div>
     </main>
     <script>
-        function validateEmailOrPhone() {
+        function validateEmail() {
             var emailInput = document.getElementById("email").value;
             if (emailInput.includes('@')) {
                 document.getElementById("email").setAttribute("type", "email");

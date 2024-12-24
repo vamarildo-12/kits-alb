@@ -1,8 +1,15 @@
+<?php
+@include_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'session_timeout.php');
+session_start(); // Start the session to access session variables
+
+// Check if the user is logged in
+$isLoggedIn = isset($_SESSION['user_id']);
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Kits Albania</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +30,13 @@
         </a>
       </div>
       <div class="kits-header-right-section">
-        <a href="login.php" class="header-link">Log In</a>
+        <?php if ($isLoggedIn): ?>
+          <!-- If logged in, show the logout button -->
+          <a href="logout.php" class="header-link">Log Out</a>
+        <?php else: ?>
+          <!-- If not logged in, show the login button -->
+          <a href="login.php" class="header-link">Log In</a>
+        <?php endif; ?>
         <a href="contact.php" class="header-link">Contact Us</a>
         <a href="catalog.php" class="header-link">Catalog</a>
       </div>

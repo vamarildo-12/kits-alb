@@ -38,6 +38,7 @@ export class ProductsGrid extends ComponentV2 {
 
     searchResults.forEach(product => {
       const productImage = product.createImageUrl();
+      console.log('Product Image URL:', productImage);
       const ratingStarsImage = product.createRatingStarsUrl();
 
       productsGridHTML += `

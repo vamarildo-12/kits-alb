@@ -1,7 +1,11 @@
+<?php
+@include_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'session_timeout.php');
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Amazon Project</title>
+    <title>Catalog</title>
 
     <!-- This code is needed for responsive design to work properly on a phone.
       (Responsive design = make the website look good on smaller screen sizes). -->

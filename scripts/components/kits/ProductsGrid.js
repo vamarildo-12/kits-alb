@@ -17,33 +17,7 @@ export class ProductsGrid extends ComponentV2 {
     this.#kitsHeader = kitsHeader;
   }
 
-  async updateCartCountFrontend(quantity) {
-    try {
-      // Fetch the total cart quantity from the backend
-      const response = await fetch('/kits-alb/get-cart-quantity.php');
-      const data = await response.json();
-      if (response.ok && data.totalQuantity !== undefined) {
-        // Increment the quantity by the amount of the added product
-        const updatedTotalQuantity = data.totalQuantity + quantity;
 
-        // Update the cart count in the frontend
-        const cartQuantityElement = this.element.querySelector('.js-cart-quantity');
-        const cartQuantityMobileElement = this.element.querySelector('.js-cart-quantity-mobile');
-
-        if (cartQuantityElement) {
-          cartQuantityElement.textContent = updatedTotalQuantity;
-        }
-
-        if (cartQuantityMobileElement) {
-          cartQuantityMobileElement.textContent = updatedTotalQuantity;
-        }
-      } else {
-        console.error('Failed to fetch the cart count from the server');
-      }
-    } catch (error) {
-      console.error('Error updating cart count:', error);
-    }
-  }
   
   async render() {
     try {
@@ -51,8 +25,8 @@ export class ProductsGrid extends ComponentV2 {
       const searchText = searchParams.get('search') || '';
 
       const response = searchText
-        ? await fetch(`/kits-alb/search-products.php?search=${searchText}`)
-        : await fetch('/kits-alb/get-products.php');
+        ? await fetch(`/kits-alb/backend/search-products.php?search=${searchText}`)
+        : await fetch('/kits-alb/backend/get-products.php');
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -209,7 +183,8 @@ export class ProductsGrid extends ComponentV2 {
   }
 
   async #checkSessionAndAddToCart(event) {
-    const response = await fetch('/kits-alb/check-session.php');
+    const basePath = window.location.origin + '/kits-alb/backend/';
+    const response = await fetch(`${basePath}/check-session.php`);
     const data = await response.json();
     if (!data.isLoggedIn) {
       window.location.href = 'login.php';
@@ -250,8 +225,8 @@ export class ProductsGrid extends ComponentV2 {
       window.location.href = 'login.php';
       return;
     }
-  
-    const response = await fetch('/kits-alb/add-to-cart.php', {
+  const basePath = window.location.origin + '/kits-alb/backend/';
+    const response = await fetch(`${basePath}/add-to-cart.php`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -288,7 +263,8 @@ export class ProductsGrid extends ComponentV2 {
 
   // Function to retrieve the user ID from session or database
   async #getUserId() {
-    const response = await fetch('/kits-alb/get-user-id.php');
+    const basePath = window.location.origin + '/kits-alb/backend/';
+    const response = await fetch(`${basePath}/get-user-id.php`);
     const data = await response.json();
     return data.userId || null;
   }

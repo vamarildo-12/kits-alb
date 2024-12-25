@@ -1,0 +1,148 @@
+/* General Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Header Styling */
+.kits-header {
+  background-color: rgb(19, 25, 33);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.kits-header-left-section img {
+  width: 100px;
+}
+
+.kits-header-right-section {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  width: 300px; /* Increased width to prevent wrapping */
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.header-link:hover {
+  border: 1px solid white;
+}
+
+/* Carousel Styling */
+/* Carousel Styling */
+.carousel-container {
+  margin-top: 60px; /* Below header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  background-image: url("../../images/carousel-background.jpg"); 
+  background-size: 100% 100%;
+  background-position: center;
+  color: white;
+}
+
+.carousel {
+  position: relative;
+  text-align: center;
+  animation: dropdown 3s ease-in-out;
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.carousel-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quote {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.shop-now-btn {
+  background-color: #febd69;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: black;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.shop-now-btn:hover {
+  background-color: #e6a54d;
+}
+
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quote {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.shop-now-btn {
+  background-color: #febd69;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: black;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.shop-now-btn:hover {
+  background-color: #e6a54d;
+}
+
+/* Footer Styling */
+.kits-footer {
+  background-color: rgb(19, 25, 33);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-link {
+  color: #febd69;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}

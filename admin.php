@@ -20,7 +20,7 @@
                 <img class="kits-mobile-logo" src="images/kits-mobile-logo-white.png" alt="Kits Alb Mobile Logo">
             </a>
         </section>
-        
+    </header>
 
 </body>
 </html>

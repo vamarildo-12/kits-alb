@@ -107,13 +107,18 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/pages/login.css">
+    <link rel="stylesheet" href="styles/shared/kits-header.css">
     <title>Login</title>
 </head>
 <body>
-    <header>
-        <a href="index.php" class="logo">
-            <img src="images/kits-logo-white.png" alt="Kits.alb Logo">
-        </a>
+<header class="kits-header">
+        <!-- Left Section: Logo and Branding -->
+        <section class="left-section">
+            <a href="admin_dashboard.php" class="header-link">
+                <img class="kits-logo" src="images/kits-logo-white.png" alt="Kits Alb Logo">
+                <img class="kits-mobile-logo" src="images/kits-mobile-logo-white.png" alt="Kits Alb Mobile Logo">
+            </a>
+        </section>
     </header>
     <main>
         <div class="login-container">

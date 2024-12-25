@@ -33,6 +33,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
         <?php if ($isLoggedIn): ?>
           <!-- If logged in, show the logout button -->
           <a href="logout.php" class="header-link">Log Out</a>
+          <a href="account.php" class="header-link">Account</a>
         <?php else: ?>
           <!-- If not logged in, show the login button -->
           <a href="login.php" class="header-link">Log In</a>

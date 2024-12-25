@@ -12,6 +12,11 @@ header {
     text-align: center;
 }
 
+header .logo:hover{
+    border: 1px solid white;
+    border-radius: 10%;
+}
+
 header .logo img {
     width: 120px;
 }

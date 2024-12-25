@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <header class="kits-header">
         <!-- Left Section: Logo and Branding -->
         <section class="left-section">
-            <a href="admin_dashboard.php" class="header-link">
+            <a href="index.php" class="header-link">
                 <img class="kits-logo" src="images/kits-logo-white.png" alt="Kits Alb Logo">
                 <img class="kits-mobile-logo" src="images/kits-mobile-logo-white.png" alt="Kits Alb Mobile Logo">
             </a>

@@ -8,15 +8,16 @@
   <link rel="stylesheet" href="styles/shared/kits-header.css">
 </head>
 <body>
-<header class="kits-header">
-        <!-- Left Section: Logo and Branding -->
-        <section class="left-section">
-            <a href="index.php" class="header-link">
-                <img class="kits-logo" src="images/kits-logo-white.png" alt="Kits Alb Logo">
-                <img class="kits-mobile-logo" src="images/kits-mobile-logo-white.png" alt="Kits Alb Mobile Logo">
-            </a>
-        </section>
-    </header>
+<div class="kits-header">
+      <div class="kits-header-left-section">
+        <a href="index.php" class="header-link">
+          <img class="kits-logo" src="images/kits-logo-white.png">
+          <img class="kits-mobile-logo" src="images/kits-mobile-logo-white.png">
+        </a>
+      </div>
+      
+      </div>
+  </div>
 
   <div class="new_home_web">
     <div class="responsive-container-block big-container">
@@ -51,7 +52,6 @@
                     <input class="input" id="ipmgh-2" name="Email" placeholder="Email Address">
                   </div>
                   <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 lastPhone">
-                    <input class="input" id="imgis-2" name="PhoneNumber" placeholder="Phone Number">
                   </div>
                 </div>
                 <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-2">

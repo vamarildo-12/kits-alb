@@ -55,8 +55,9 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/pages/login.css">
+    <link rel="stylesheet" href="styles/pages/registration.css">
     <link rel="stylesheet" href="styles/shared/kits-header.css">
+    <link rel="stylesheet" href="styles/shared/kits-footer.css">
     <title>Register</title>
 </head>
 <body>
@@ -70,37 +71,55 @@ $conn->close();
     </header>
 
     <main class="main-content">
-        <div class="registration-container">
-            <h1>Create an Account</h1>
-            <?php if ($error): ?>
-                <p class="error-msg"><?php echo $error; ?></p>
-            <?php elseif ($success): ?>
-                <p class="success-msg"><?php echo $success; ?></p>
-            <?php endif; ?>
-
-            <form action="" method="POST">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required placeholder="Enter your username">
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email">
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required placeholder="Enter your password">
-
-                <label for="confirm_password">Confirm Password</label>
-                <input type="password" id="confirm_password" name="confirm_password" required placeholder="Confirm your password">
-
-                <button type="submit">Register</button>
-            </form>
-            <div class="links">
-                <p>Already have an account? <a href="login.php">Sign in</a></p>
+        <div class="new_home_web">
+            <div class="responsive-container-block big-container">
+                <div class="responsive-container-block textContainer">
+                    <div class="topHead">
+                        <p class="text-blk heading">
+                            Create an
+                            <span class="yellowText">
+                                Account
+                            </span>
+                        </p>
+                        <div class="yellowLine" id="w-c-s-bgc_p-2-dm-id"></div>
+                    </div>
+                    <p class="text-blk subHeading">
+                        Join us and start your journey with Kits Alb!
+                    </p>
+                </div>
+                <div class="responsive-container-block container">
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b">
+                        <form class="form-box" action="" method="POST">
+                            <div class="container-block form-wrapper">
+                                <div class="responsive-container-block">
+                                    <div class="left4">
+                                        <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6">
+                                            <input class="input" id="username" name="username" placeholder="Username" required>
+                                        </div>
+                                        <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6">
+                                            <input class="input" id="email" name="email" placeholder="Email" required type="email">
+                                        </div>
+                                        <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6">
+                                            <input class="input" id="password" name="password" placeholder="Password" required type="password">
+                                        </div>
+                                        <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6">
+                                            <input class="input" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required type="password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" name="submit" class="send" id="w-c-s-bgc_p-1-dm-id">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Kits Alb. All rights reserved.</p>
+    <footer class="kits-footer">
+      <p>&copy; 2024 Football Kits Albania. All rights reserved. <br> Follow us on 
+        <a href="https://instagram.com/kits.alb" target="_blank" class="footer-link">Instagram</a>
+      </p>
     </footer>
 </body>
 </html>

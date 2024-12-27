@@ -8,23 +8,7 @@ body {
   min-height: 100vh; /* Ensures the body takes full viewport height */
 }
 
-.kits-footer {
-  background-color: rgb(19, 25, 33);
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  font-size: medium;
-  margin-top: auto; /* Pushes the footer to the bottom */
-}
 
-.footer-link {
-  color: #febd69;
-  text-decoration: none;
-}
-
-.footer-link:hover {
-  text-decoration: underline;
-}
 
 .new_home_web {
   flex: 1; /* Expands the container to fill available space */

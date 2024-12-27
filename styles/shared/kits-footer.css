@@ -1,0 +1,17 @@
+.kits-footer {
+  background-color: rgb(19, 25, 33);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: medium;
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.footer-link {
+  color: #febd69;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}

@@ -6,6 +6,7 @@
   <title>Contact Us</title>
   <link rel="stylesheet" href="styles/pages/contact.css">
   <link rel="stylesheet" href="styles/shared/kits-header.css">
+  <link rel="stylesheet" href="styles/shared/kits-footer.css">
 </head>
 <body>
 <div class="kits-header">

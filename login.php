@@ -86,11 +86,12 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/pages/login.css">
     <link rel="stylesheet" href="styles/shared/kits-header.css">
+    <link rel="stylesheet" href="styles/shared/kits-footer.css">
     <title>Login</title>
 </head>
 <body>
     <header class="kits-header">
-        <section class="left-section">
+        <section class="kits-header-left-section">
             <a href="index.php" class="header-link">
                 <img class="kits-logo" src="images/kits-logo-white.png" alt="Kits Alb Logo">
                 <img class="kits-mobile-logo" src="images/kits-mobile-logo-white.png" alt="Kits Alb Mobile Logo">
@@ -98,40 +99,61 @@ $conn->close();
         </section>
     </header>
 
-    <main class="main-content">
-        <div class="login-container">
-            <h1>Sign-In</h1>
-            <?php if ($error): ?>
-                <p class="error-msg"><?php echo $error; ?></p>
-            <?php endif; ?>
-
-            <form action="" method="POST">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" required placeholder="Enter your email" value="<?php echo htmlspecialchars($email); ?>">
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required placeholder="Enter your password">
-
-                <div class="checkbox-container">
-                    <input type="checkbox" id="show-password" onclick="togglePassword()">
-                    <label for="show-password">Show Password</label>
+    <div class="new_home_web">
+        <div class="responsive-container-block big-container">
+            <div class="responsive-container-block textContainer">
+                <div class="topHead">
+                    <p class="text-blk heading">
+                        Welcome back to 
+                        <span class="yellowText">
+                            Kits Alb
+                        </span>
+                    </p>
+                    <div class="yellowLine"></div>
                 </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" id="keep-signed-in" name="keep-signed-in">
-                    <label for="keep-signed-in">Keep me signed in</label>
-                </div>
+                <p class="text-blk subHeading">
+                    Please sign in to continue
+                </p>
+            </div>
 
-                <button type="submit">Sign-In</button>
-            </form>
-            <div class="links">
-                <a href="passwordreset.php">Forgot your password?</a>
-                <p>New to Kits.alb? <a href="registration.php">Create your Kits.alb account</a></p>
+            <div class="responsive-container-block container">
+                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line">
+                    <form class="form-box" action="" method="POST">
+                        <div class="container-block form-wrapper">
+                            <div class="responsive-container-block">
+                                <div class="left4">
+                                    <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6">
+                                        <input class="input" id="email" name="email" placeholder="Email Address" required value="<?php echo htmlspecialchars($email); ?>">
+                                    </div>
+                                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                                        <input class="input" id="password" name="password" placeholder="Password" type="password" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="show-password" onclick="togglePassword()">
+                                <label for="show-password">Show Password</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="keep-signed-in" name="keep-signed-in">
+                                <label for="keep-signed-in">Keep me signed in</label>
+                            </div>
+                            <input type="submit" name="submit" class="send">
+                        </div>
+                    </form>
+                    <div class="links">
+                        <a href="passwordreset.php">Forgot your password?</a>
+                        <p>New to Kits.alb? <a href="registration.php">Create your Kits.alb account</a></p>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Kits Alb. All rights reserved.</p>
+    <footer class="kits-footer">
+      <p>&copy; 2024 Football Kits Albania. All rights reserved. <br> Follow us on 
+        <a href="https://instagram.com/kits.alb" target="_blank" class="footer-link">Instagram</a>
+      </p>
     </footer>
 
     <script>

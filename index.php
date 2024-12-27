@@ -21,45 +21,49 @@ $isLoggedIn = isset($_SESSION['user_id']);
     <link rel="stylesheet" href="styles/pages/index.css">
   </head>
   <body>
-    <!-- Header -->
-    <div class="kits-header">
-      <div class="kits-header-left-section">
-        <a href="index.php" class="header-link">
-          <img class="kits-logo" src="images/kits-logo-white.png">
-          <img class="kits-mobile-logo" src="images/kits-mobile-logo-white.png">
-        </a>
-      </div>
-      <div class="kits-header-right-section">
-        <?php if ($isLoggedIn): ?>
-          <!-- If logged in, show the logout button -->
-          <a href="logout.php" class="header-link">Log Out</a>
-          <a href="account.php" class="header-link">Account</a>
-        <?php else: ?>
-          <!-- If not logged in, show the login button -->
-          <a href="login.php" class="header-link">Log In</a>
-        <?php endif; ?>
-        <a href="contact.php" class="header-link">Contact Us</a>
-        <a href="catalog.php" class="header-link">Catalog</a>
-      </div>
-    </div>
-
-    <!-- Carousel -->
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="carousel-content">
-          <p class="quote">Grab your favourite Jersey!</p>
-          <button class="shop-now-btn" onclick="window.location.href='catalog.php'">Shop Now</button>
+    <div class="wrapper">
+      <!-- Header -->
+      <div class="kits-header">
+        <div class="kits-header-left-section">
+          <a href="index.php" class="header-link">
+            <img class="kits-logo" src="images/kits-logo-white.png">
+            <img class="kits-mobile-logo" src="images/kits-mobile-logo-white.png">
+          </a>
+        </div>
+        <div class="kits-header-right-section">
+          <?php if ($isLoggedIn): ?>
+            <!-- If logged in, show the logout button -->
+            <a href="logout.php" class="header-link">Log Out</a>
+            <a href="account.php" class="header-link">Account</a>
+          <?php else: ?>
+            <!-- If not logged in, show the login button -->
+            <a href="login.php" class="header-link">Log In</a>
+          <?php endif; ?>
+          <a href="contact.php" class="header-link">Contact Us</a>
+          <a href="catalog.php" class="header-link">Catalog</a>
         </div>
       </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <div class="carousel-container">
+          <div class="carousel">
+            <div class="carousel-content">
+              <p class="quote">Grab your favourite Jersey!</p>
+              <button class="shop-now-btn" onclick="window.location.href='catalog.php'">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="kits-footer">
+        <p>&copy; 2024 Football Kits Albania <br> Follow us on 
+          <a href="https://instagram.com/kits.alb" target="_blank" class="footer-link">Instagram</a>
+        </p>
+      </footer>
     </div>
 
-    <!-- Footer -->
-    <footer class="kits-footer">
-      <p>&copy; 2024 Football Kits Albania <br> Follow us on 
-        <a href="https://instagram.com/kits.alb" target="_blank" class="footer-link">Instagram</a>
-      </p>
-    </footer>
-
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

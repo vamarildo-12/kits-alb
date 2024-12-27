@@ -32,6 +32,18 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px; /* Add some padding for better spacing */
+  animation: dropdown 1s ease-in-out;
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 

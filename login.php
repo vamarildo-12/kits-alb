@@ -1,42 +1,34 @@
 <?php
 @include_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'session_timeout.php');
-// Inline database connection
 $servername = "localhost";
 $username = "root";
-$password = ""; // Replace with your database password
-$dbname = "web"; // Replace with your database name
+$password = "";
+$dbname = "web";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Initialize session
 session_start();
 
-// Initialize variables
 $error = '';
 $email = '';
 $password = '';
 
-// Track failed login attempts for guests (session-based)
 if (!isset($_SESSION['failed_attempts'])) {
     $_SESSION['failed_attempts'] = 0;
     $_SESSION['last_failed_attempt'] = null;
 }
 
 $max_failed_attempts = 7;
-$block_duration = 1800; // 30 minutes in seconds
+$block_duration = 1800;
 
-// Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Check if the user has reached the maximum failed attempts
     if ($_SESSION['failed_attempts'] >= $max_failed_attempts) {
         $last_failed_attempt = $_SESSION['last_failed_attempt'];
         $current_time = time();
@@ -45,33 +37,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($time_diff < $block_duration) {
             $error = "Too many failed attempts. Please try again in 30 minutes.";
         } else {
-            // Reset failed attempts after the block duration has passed
             $_SESSION['failed_attempts'] = 0;
         }
     }
 
-    // If not blocked, continue checking login
     if (empty($error)) {
-        // Prepare and execute query to check the user credentials
         $stmt = $conn->prepare("SELECT id, password, role FROM Users WHERE email = ?");
-        $stmt->bind_param("s", $email); 
+        $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
 
-        // Check if the user exists
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
 
-            // Verify password
             if (password_verify($password, $user['password'])) {
-                // Successful login, reset failed attempts
                 $_SESSION['failed_attempts'] = 0;
-
-                // Start session and redirect based on user role
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_role'] = $user['role'];
 
-                // Redirect based on role
                 if ($user['role'] === 'admin') {
                     header("Location: admin/dashboard.php");
                 } else {
@@ -79,17 +62,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
                 exit;
             } else {
-                // Invalid password, increment failed attempts
                 $_SESSION['failed_attempts'] += 1;
                 $_SESSION['last_failed_attempt'] = time();
-
                 $error = "Invalid password. Please try again.";
             }
         } else {
-            // No account found with that email
             $_SESSION['failed_attempts'] += 1;
             $_SESSION['last_failed_attempt'] = time();
-
             $error = "No account found with that email.";
         }
 
@@ -97,7 +76,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Close the database connection
 $conn->close();
 ?>
 
@@ -111,8 +89,7 @@ $conn->close();
     <title>Login</title>
 </head>
 <body>
-<header class="kits-header">
-        <!-- Left Section: Logo and Branding -->
+    <header class="kits-header">
         <section class="left-section">
             <a href="index.php" class="header-link">
                 <img class="kits-logo" src="images/kits-logo-white.png" alt="Kits Alb Logo">
@@ -120,10 +97,10 @@ $conn->close();
             </a>
         </section>
     </header>
-    <main>
+
+    <main class="main-content">
         <div class="login-container">
             <h1>Sign-In</h1>
-            <!-- Show error message if login failed -->
             <?php if ($error): ?>
                 <p class="error-msg"><?php echo $error; ?></p>
             <?php endif; ?>
@@ -152,6 +129,10 @@ $conn->close();
             </div>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Kits Alb. All rights reserved.</p>
+    </footer>
 
     <script>
         function togglePassword() {

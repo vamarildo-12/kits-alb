@@ -1,35 +1,64 @@
+/* General Styling */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f2f2f2;
     color: #111;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.login-container, 
-.password-reset-container, 
+/* Header Styling */
+header.kits-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #131921;
+    color: white;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Styling */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px; /* Offset to ensure header doesn't overlap */
+    margin-bottom: 70px; /* Offset to ensure footer doesn't overlap */
+}
+
+/* Login/Registration/Reset Container Styling */
+.login-container,
+.password-reset-container,
 .registration-container {
     max-width: 400px;
-    margin: 50px auto;
+    width: 100%;
     padding: 20px;
     background: white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     animation: dropdown 1s ease-in-out;
-    margin-top: 30px;
 }
 
+/* Animation */
 @keyframes dropdown {
     from {
-      opacity: 0;
-      transform: translateY(-30px);
+        opacity: 0;
+        transform: translateY(-30px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
 
+/* Button, Input, Links, and Miscellaneous */
 h1 {
     text-align: center;
     color: #131921;
@@ -63,45 +92,35 @@ button:hover {
     background-color: #ff7f00;
 }
 
-.checkbox-container, .terms {
+.checkbox-container,
+.terms {
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
-.checkbox-container input, .terms input {
+.show-password input,
+.terms input {
     width: auto;
     margin-right: 10px;
     vertical-align: middle;
 }
 
-.checkbox-container, .terms {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.show-password input, .terms input {
-    width: auto;
-    margin-right: 10px; /* Optional: Adds spacing between checkbox and text */
-    vertical-align: middle; /* Align checkbox with the text */
-}
-
-.show-password, .terms {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.error-msg, .confirmation-msg {
+.error-msg,
+.confirmation-msg {
     color: red;
     text-align: center;
     font-size: 14px;
 }
 
-.links{
-    display:'flex';
+.links {
+    display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
 }
+
 .links a {
     text-decoration: none;
     color: #0066c0;
@@ -111,24 +130,34 @@ button:hover {
     text-decoration: underline;
 }
 
+/* Footer Styling */
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     padding: 20px 0;
     background-color: #131921;
+    color: white;
     text-align: center;
-    color: #fff;
     font-size: 12px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
-    color: #fff;
+    color: white;
+    text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
+/* Responsive Design */
 @media (max-width: 600px) {
-    .login-container, .password-reset-container, .registration-container {
+    .login-container,
+    .password-reset-container,
+    .registration-container {
         margin: 20px;
         padding: 15px;
     }

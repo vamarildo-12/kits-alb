@@ -7,159 +7,185 @@ export class Cart {
   #items;
 
   constructor() {
-    this.loadFromStorage();
+    this.#items = []; // Initialize an empty cart
+    this.loadFromBackend(); // Load cart from backend
   }
 
-  loadFromStorage() {
-    this.#items = localStorage.getItem('cart')
-      ? JSON.parse(localStorage.getItem('cart'))
-      : [{
-          id: 'b5f9b6c7-dcc7-4de4-8df9-128f2c9e24fa',
-          productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
-          quantity: 2,
-          deliveryOptionId: 'f297d333-a5c4-452f-840b-15a662257b3f',
-        }, {
-          id: '7a8151b3-39d5-4ff6-8755-5abfa9be7102',
-          productId: '15b6fc6f-327a-4ec4-896f-486349e85a3d',
-          quantity: 1,
-          deliveryOptionId: '6e2dd65a-6665-4f24-bcdc-f2ecdbc6e156'
-        }];
+  // Fetch cart data from backend and load it
+  async loadFromBackend() {
+    try {
+      const response = await fetch('/kits-alb/backend/get-cart-products.php'); // Update the PHP endpoint
+      const data = await response.json();
+      
+      if (Array.isArray(data)) {
+        this.#items = data.map(item => ({
+          id: item.productId,
+          productId: item.productId,
+          name: item.product_name,
+          image: item.product_image,
+          priceCents: item.priceCents,
+          quantity: item.quantity,
+          sizes: item.sizes
+        }));
+      } else {
+        console.error('Error fetching cart products:', data);
+      }
+    } catch (error) {
+      console.error('Error loading cart:', error);
+    }
   }
 
-  get items() {
-    return this.#items;
-  }
-
+  // Add an item to the cart by making a POST request to the backend
   async addToCart(productId, quantity) {
     console.log('Adding to cart:', { productId, quantity });
   
-    return fetch('/kits-alb/backend/add-to-cart.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        product_id: productId.toString(), // Ensure productId is a string
-        quantity: parseInt(quantity),
-      })
-    })
-    .then(response => response.json())
-    .then(data => {
+    try {
+      const response = await fetch('/kits-alb/backend/add-to-cart.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          product_id: productId.toString(), // Ensure productId is a string
+          quantity: parseInt(quantity),
+        })
+      });
+
+      const data = await response.json();
       console.log('Response:', data);
+
+      // If successful, reload cart from backend to reflect changes
+      if (data.success) {
+        await this.loadFromBackend();
+      }
+
       return data.cart_count || 0;
-    })
-    .catch(error => {
-      console.error('Error:', error);
+    } catch (error) {
+      console.error('Error adding to cart:', error);
       return 0;
-    });
+    }
   }
 
-
+  // Fetch total cart quantity from the backend
   async calculateTotalQuantity() {
     try {
-        const response = await fetch('/kits-alb/backend/get-cart-count.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({})  // No product_id needed, just calculate the total quantity
-        });
+      const response = await fetch('/kits-alb/backend/get-cart-count.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({})  // No product_id needed, just calculate the total quantity
+      });
 
-        const data = await response.json();
-        console.log('Cart count data:', data);
-        
-        // Return the total cart count or 0 if not found
-        return data.cart_count || 0;
+      const data = await response.json();
+      console.log('Cart count data:', data);
+
+      // Return the total cart count or 0 if not found
+      return data.cart_count || 0;
     } catch (error) {
-        console.error('Cart count error:', error);
-        return 0;
+      console.error('Cart count error:', error);
+      return 0;
+    }
+  }
+
+  // Update the delivery option for a cart item
+  async updateDeliveryOption(cartItemId, deliveryOptionId) {
+    try {
+      const response = await fetch('/kits-alb/backend/update-delivery-option.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          cart_item_id: cartItemId,
+          delivery_option_id: deliveryOptionId
+        })
+      });
+
+      const data = await response.json();
+      console.log('Delivery option update response:', data);
+
+      // Reload cart to reflect updated delivery options
+      if (data.success) {
+        await this.loadFromBackend();
+      }
+    } catch (error) {
+      console.error('Error updating delivery option:', error);
+    }
+  }
+
+  // Calculate the total costs (product, shipping, and taxes) by fetching from the backend
+  async calculateCosts() {
+    try {
+      const response = await fetch('/kits-alb/backend/get-cart-costs.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ cart_items: this.#items }) // Send current cart items to backend
+      });
+
+      const data = await response.json();
+      console.log('Cart costs data:', data);
+
+      return data.costs || { productCostCents: 0, shippingCostCents: 0, taxCents: 0, totalCents: 0 };
+    } catch (error) {
+      console.error('Error calculating costs:', error);
+      return { productCostCents: 0, shippingCostCents: 0, taxCents: 0, totalCents: 0 };
+    }
+  }
+
+  // Remove an item from the cart (call backend to remove)
+  async removeFromCart(cartItemId) {
+    try {
+      const response = await fetch('/kits-alb/backend/remove-from-cart.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ cart_item_id: cartItemId })
+      });
+
+      const data = await response.json();
+      console.log('Remove from cart response:', data);
+
+      // Reload cart to reflect item removal
+      if (data.success) {
+        await this.loadFromBackend();
+      }
+    } catch (error) {
+      console.error('Error removing from cart:', error);
+    }
+  }
+
+  async decreaseQuantity(productId) {
+    const response = await fetch('/kits-alb/backend/remove-from-cart.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ product_id: productId })
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+        if (data.quantity === 0) {
+            console.log('Product removed from cart');
+        } else {
+            console.log(`Quantity decreased, new quantity: ${data.quantity}`);
+        }
+        // Update the UI or re-fetch cart data here
+    } else {
+        console.error('Failed to decrease quantity:', data.error);
     }
 }
 
-  updateDeliveryOption(cartItemId, deliveryOptionId) {
-    const cartItem = this.#items.find(cartItem => {
-      return cartItem.id === cartItemId;
-    });
-
-    cartItem.deliveryOptionId = deliveryOptionId;
-    this.#saveToStorage();
-  }
-
+isEmpty() {
+  return this.#items.length === 0;
+}
   
-  calculateCosts() {
-    const productCostCents = this.#calculateProductCost();
-    const shippingCostCents = this.#calculateShippingCosts();
-    const taxCents = (productCostCents + shippingCostCents) * MoneyUtils.taxRate;
-    const totalCents = Math.round(productCostCents + shippingCostCents + taxCents);
-
-    return {
-      productCostCents,
-      shippingCostCents,
-      taxCents,
-      totalCents
-    };
-  }
-
-  reset() {
-    this.#items = [];
-    this.#saveToStorage();
-  }
-
-  isEmpty() {
-    return this.#items.length === 0;
-  }
-
-  #isSameVariation(variation1, variation2) {
-    // Ensure both variations are objects before comparing
-    if (!variation1) variation1 = {};
-    if (!variation2) variation2 = {};
-  
-    console.log('Comparing variations:', variation1, variation2);
-  
-    // Compare the number of keys in both variations
-    const variation1Keys = Object.keys(variation1);
-    const variation2Keys = Object.keys(variation2);
-  
-    if (variation1Keys.length !== variation2Keys.length) {
-      return false; // Different number of keys means they are not the same
-    }
-  
-    // Compare each key-value pair in the variations
-    for (const key of variation1Keys) {
-      if (variation1[key] !== variation2[key]) {
-        return false;
-      }
-    }
-  
-    return true;
-  }
-  #calculateProductCost() {
-    let productCost = 0;
-
-    this.#items.forEach(cartItem => {
-      const product = products.findById(cartItem.productId);
-      productCost += product.priceCents * cartItem.quantity;
-    });
-
-    return productCost;
-  }
-
-  #calculateShippingCosts() {
-    let shippingCost = 0;
-
-    this.#items.forEach(cartItem => {
-      const deliveryOption = deliveryOptions.findById(cartItem.deliveryOptionId);
-      shippingCost += deliveryOption.costCents;
-    });
-
-    return shippingCost;
-  }
-
-  #saveToStorage() {
-    localStorage.setItem(
-      'cart',
-      JSON.stringify(this.#items)
-    );
+  // Get the current items in the cart
+  get items() {
+    return this.#items;
   }
 }
 

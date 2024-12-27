@@ -25,8 +25,8 @@ export class ProductsGrid extends ComponentV2 {
       const searchText = searchParams.get('search') || '';
 
       const response = searchText
-        ? await fetch(`/kits-alb/backend/search-products.php?search=${searchText}`)
-        : await fetch('/kits-alb/backend/get-products.php');
+        ? await fetch(`backend/search-products.php?search=${searchText}`)
+        : await fetch('backend/get-products.php');
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

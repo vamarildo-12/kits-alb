@@ -28,7 +28,7 @@ export class Product {
 
   createImageUrl(selectedVariation) {
     if (!this.#variations || !this.#variationImages) {
-      return 'kits-alb/images/'+ this.#image;
+      return ''+ this.#image;
     }
 
     // If there was no selected variation, just use the
@@ -54,10 +54,10 @@ export class Product {
     });
 
     if (matchedKey) {
-      return 'kits-alb/images/'+ this.#variationImages[matchedKey];
+      return  this.#variationImages[matchedKey];
     }
 
-    return 'kits-alb/images/'+ this.#image;
+    return this.#image;
   }
 
   createRatingStarsUrl() {

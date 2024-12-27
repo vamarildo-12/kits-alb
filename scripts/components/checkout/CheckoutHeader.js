@@ -2,9 +2,9 @@ import {cart} from '../../data/cart.js';
 import {ComponentV2} from '../ComponentV2.js';
 
 export class CheckoutHeader extends ComponentV2 {
-
-  render() {
-    const quantity = cart.calculateTotalQuantity();
+  async render() {
+    // Wait for the total quantity to resolve
+    const quantity = await cart.calculateTotalQuantity();
 
     this.element.innerHTML = `
       <div class="header-content">
@@ -39,13 +39,12 @@ export class CheckoutHeader extends ComponentV2 {
         </section>
       </div>
     `;
-
   }
 
-  updateCartCount() {
-    const totalQuantity = cart.calculateTotalQuantity();
+  async updateCartCount() {
+    // Wait for the total quantity to resolve
+    const totalQuantity = await cart.calculateTotalQuantity();
     this.element.querySelector('.js-return-to-home-link')
       .textContent = `${totalQuantity} items`;
   }
-
 }

@@ -68,7 +68,7 @@
   </div>
 
   <footer class="kits-footer">
-      <p>&copy; 2024 Football Kits Albania <br> Follow us on 
+      <p>&copy; 2024 Football Kits Albania. All rights reserved. <br> Follow us on 
         <a href="https://instagram.com/kits.alb" target="_blank" class="footer-link">Instagram</a>
       </p>
     </footer>

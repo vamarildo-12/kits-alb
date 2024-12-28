@@ -1,0 +1,208 @@
+[
+    {"id":"b0935f99-45f4-4ad0-8105-532d7e268eb9","image":"/kits-alb/images/products/uruguay-home.png","name":"Uruguay Home Kit 2024-2025","rating":{"stars":4.5,"count":87},"priceCents":3499,"keywords":["jersey","national team","uruguay"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"d634c4b1-cc5e-4c6b-98d8-8f350fd40455","image":"/kits-alb/images/products/belgium-home.png","name":"Belgium Home Kit 2024-2025","rating":{"stars":4.5,"count":96},"priceCents":3499,"keywords":["jersey","national team","belgium"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"a5c65e1d-59b4-406d-8214-3e2c3d4597fd","image":"/kits-alb/images/products/brazil-home.png","name":"Brazil Home Kit 2024-2025","rating":{"stars":5,"count":58},"priceCents":3499,"keywords":["jersey","national team","brazil"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"a28a5a8d-c15f-4cbf-b923-3e388b14bcdb","image":"/kits-alb/images/products/croatia-home.png","name":"Croatia Home Kit 2024-2025","rating":{"stars":4.5,"count":78},"priceCents":3499,"keywords":["jersey","national team","croatia"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"e183ab5d-c5fa-4a57-b3a1-e58a215f4a62","image":"/kits-alb/images/products/spain-home.png","name":"Spain Home Kit 2024-2025","rating":{"stars":5,"count":60},"priceCents":3499,"keywords":["jersey","national team","spain"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"602d8d50-b5e9-4b8e-bb9f-d4b3ccf4de63","image":"/kits-alb/images/products/france-home.png","name":"France Home Kit 2024-2025","rating":{"stars":4.5,"count":86},"priceCents":3499,"keywords":["jersey","national team","france"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"d8c697e5-35f9-4f94-b0cf-b615fa18e982","image":"/kits-alb/images/products/england-home.png","name":"England Home Kit 2024-2025","rating":{"stars":4.5,"count":68},"priceCents":3499,"keywords":["jersey","national team","england"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"4d0b3b8f-4217-4637-960f-ea465d43d784","image":"/kits-alb/images/products/portugal-home.png","name":"Portugal Home Kit 2024-2025","rating":{"stars":4,"count":94},"priceCents":3499,"keywords":["jersey","national team","portugal"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"ce4a6940-8282-42e7-a129-ff5a7e399ef8","image":"/kits-alb/images/products/italy-home.png","name":"Italy Home Kit 2024-2025","rating":{"stars":4.5,"count":69},"priceCents":3499,"keywords":["jersey","national team","italy"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"9ec8f97c-d742-4322-95c4-5b6c4a78d8c1","image":"/kits-alb/images/products/argentina-home.png","name":"Argentina Home Kit 2024-2025","rating":{"stars":5,"count":50},"priceCents":3499,"keywords":["jersey","national team","argentina"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"d03a75a4-27b4-46f2-b2e1-404e61ffcc71","image":"/kits-alb/images/products/netherlands-home.png","name":"Netherlands Home Kit 2024-2025","rating":{"stars":4.5,"count":78},"priceCents":3499,"keywords":["jersey","national team","netherlands"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"42b2e9c1-1d98-4a93-b72b-b6fa41201687","image":"/kits-alb/images/products/germany-home.png","name":"Germany Home Kit 2024-2025","rating":{"stars":4.5,"count":87},"priceCents":3499,"keywords":["jersey","national team","germany"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"b255d3be-f968-4c93-9c8b-d5ed0e7bc1fe","image":"/kits-alb/images/products/barcelona-home.png","name":"Barcelona Home Kit 2024-2025","rating":{"stars":5,"count":66},"priceCents":3099,"keywords":["jersey","club","spain","barcelona"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"fcdfd7ae-b527-46da-bd1d-3f6a847d0c76","image":"/kits-alb/images/products/chelsea-home.png","name":"Chelsea Home Kit 2024-2025","rating":{"stars":4.5,"count":88},"priceCents":3099,"keywords":["jersey","club","england","chelsea"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"e0b51939-5779-4e7b-a006-cc8f974f4730","image":"/kits-alb/images/products/napoli-home.png","name":"Napoli Home Kit 2024-2025","rating":{"stars":4,"count":97},"priceCents":3099,"keywords":["jersey","club","italy","napoli"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"8a2271b0-1a3d-4c68-bbfe-f3d6782fd9d2","image":"/kits-alb/images/products/newcastle-home.png","name":"Newcastle Home Kit 2024-2025","rating":{"stars":4.5,"count":76},"priceCents":3099,"keywords":["jersey","club","england","newcastle"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"aff0eab4-8f02-4879-bd50-e070903be28e","image":"/kits-alb/images/products/bayernmunich-home.png","name":"Bayern Munich Home Kit 2024-2025","rating":{"stars":5,"count":56},"priceCents":3099,"keywords":["jersey","club","germany","bayern munich"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"5996a53f-c30f-49c0-9015-8f2db91c2184","image":"/kits-alb/images/products/atalanta-home.png","name":"Atalanta Home Kit 2024-2025","rating":{"stars":4.5,"count":87},"priceCents":3099,"keywords":["jersey","club","italy","atalanta"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"1180d5f3-9fa5-47fd-8d32-baff401a0d70","image":"/kits-alb/images/products/manutd-home.png","name":"Manchester United Home Kit 2024-2025","rating":{"stars":4.5,"count":70},"priceCents":3099,"keywords":["jersey","club","england","manchester united"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"20c392f4-c85e-4a0f-b68c-50075c8a9f32","image":"/kits-alb/images/products/milan-home.png","name":"AC Milan Home Kit 2024-2025","rating":{"stars":4.5,"count":74},"priceCents":3099,"keywords":["jersey","club","italy","milan"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"57eeb05e-e53b-47f1-b9e4-0c3999dcbbe4","image":"/kits-alb/images/products/liverpool-home.png","name":"Liverpool Home Kit 2024-2025","rating":{"stars":5,"count":45},"priceCents":3099,"keywords":["jersey","club","england","liverpool"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"7d7bb4e2-0fe0-4f9c-b56f-e60c1974cfac","image":"/kits-alb/images/products/arsenal-home.png","name":"Arsenal Home Kit 2024-2025","rating":{"stars":4.5,"count":80},"priceCents":3099,"keywords":["jersey","club","england","arsenal"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"d4cc7e28-c3ca-4713-8ae2-0304d1ca49d9","image":"/kits-alb/images/products/atleticomadrid-home.png","name":"Atletico Madrid Home Kit 2024-2025","rating":{"stars":4.5,"count":68},"priceCents":3099,"keywords":["jersey","club","spain","atletico madrid"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {"id":"a432e17f-e300-4a64-b5c2-f2a2a6bca5a9","image":"/kits-alb/images/products/dortmund-home.png","name":"Borusia Dortmund Home Kit 2024-2025","rating":{"stars":4.5,"count":89},"priceCents":3099,"keywords":["jersey","club","germany","borusia dortmund"],"type":"clothing","sizeChartLink":"/kits-alb/images/clothing-size-chart.png"},
+    {
+      "id": "b5f9b6c7-dcc7-4de4-8df9-128f2c9e24fa",
+      "image": "/kits-alb/images/products/tottenham-home.png",
+      "name": "Tottenham Home Kit 2024-2025",
+      "rating": {
+        "stars": 4,
+        "count": 97
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "england", "tottenham"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "7a8151b3-39d5-4ff6-8755-5abfa9be7102",
+      "image": "/kits-alb/images/products/mancity-home.png",
+      "name": "Manchester City Home Kit 2024-2025",
+      "rating": {
+        "stars": 4.5,
+        "count": 75
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "england", "manchester city"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "29a86a4f-3b7c-4882-a6c9-52e15a8760c5",
+      "image": "/kits-alb/images/products/juventus-home.png",
+      "name": "Juventus Home Kit 2024-2025",
+      "rating": {
+        "stars": 4.5,
+        "count": 70
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "italy", "juventus"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "5827b625-9bb1-474b-b17a-5f5ff7c7ca09",
+      "image": "/kits-alb/images/products/realmadrid-home.png",
+      "name": "Real Madrid Home Kit 2024-2025",
+      "rating": {
+        "stars": 5,
+        "count": 44
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "spain", "real madrid"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "4e2c4c65-9f92-4a5f-a4cc-839d08b03557",
+      "image": "/kits-alb/images/products/psg-home.png",
+      "name": "PSG Home Kit 2024-2025",
+      "rating": {
+        "stars": 4.5,
+        "count": 80
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "france", "psg"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "a9c8b6a4-1f2e-4b4d-b11d-0f4d2cfb7226",
+      "image": "/kits-alb/images/products/sporting-home.png",
+      "name": "Sporting Home Kit 2024-2025",
+      "rating": {
+        "stars": 4.5,
+        "count": 86
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "portugal", "sporting"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "b9be6519-b2d5-406f-b287-d8ed6b2eb0f0",
+      "image": "/kits-alb/images/products/milan-away.png",
+      "name": "AC Milan Away Kit 2024-2025",
+      "rating": {
+        "stars": 4.5,
+        "count": 89
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "italy", "milan"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "d6c0ebff-b625-4a5f-8e65-69ed71f32f5e",
+      "image": "/kits-alb/images/products/manutd-away.png",
+      "name": "Manchester United Away Kit 2024-2025",
+      "rating": {
+        "stars": 4.5,
+        "count": 70
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "england", "manchester united"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "4f177aff-b1fc-4e56-90b4-47377c1e3d96",
+      "image": "/kits-alb/images/products/barcelona-away.png",
+      "name": "Barcelona Away Kit 2024-2025",
+      "rating": {
+        "stars": 4.5,
+        "count": 85
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "spain", "barcelona"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "7100932f-cf34-4538-a53a-49bb7d4f98fc",
+      "image": "/kits-alb/images/products/psg-away.png",
+      "name": "PSG Away Kit 2024-2025",
+      "rating": {
+        "stars": 4,
+        "count": 89
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "france", "psg"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "a89a08b1-89b8-4972-a69e-b6d8ac0f5369",
+      "image": "/kits-alb/images/products/liverpool-away.png",
+      "name": "Liverpool Away Kit 2024-2025",
+      "rating": {
+        "stars": 4.5,
+        "count": 88
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "england", "liverpool"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "a9bbf04a-58e6-46b9-bc16-56350df49ad5",
+      "image": "/kits-alb/images/products/arsenal-away.png",
+      "name": "Arsenal Away Kit 2024-2025",
+      "rating": {
+        "stars": 4,
+        "count": 90
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "england", "arsenal"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "b8ff378f-bc62-4f98-94d4-5b9b9fd9b850",
+      "image": "/kits-alb/images/products/mancity-away.png",
+      "name": "Manchester City Away Kit 2024-2025",
+      "rating": {
+        "stars": 4.5,
+        "count": 76
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "england", "manchester city"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    },
+    {
+      "id": "12ea8e60-4cc4-47cc-a82a-55b189be4a82",
+      "image": "/kits-alb/images/products/atleticomadrid-away.png",
+      "name": "Atletico Madrid Away Kit 2024-2025",
+      "rating": {
+        "stars": 4.5,
+        "count": 75
+      },
+      "priceCents": 3099,
+      "keywords": ["jersey", "club", "spain", "atletico madrid"],
+      "type": "clothing",
+      "sizeChartLink": "/kits-alb/images/clothing-size-chart.png"
+    }
+  ]

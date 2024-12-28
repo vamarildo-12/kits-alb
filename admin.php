@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kits Alb - Admin Dashboard</title>
     
-    <!-- Link to the header-specific CSS file -->
-    <link rel="stylesheet" href="styles/shared/kits-header.css">
     
-    <!-- Link to the Admin-specific CSS file -->
+    <link rel="stylesheet" href="styles/shared/kits-header.css">
+    <link rel="stylesheet" href="styles/shared/footer-header.css">
     <link rel="stylesheet" href="styles/admin/admin.css">
 </head>
 <body>
@@ -21,6 +20,19 @@
             </a>
         </section>
     </header>
+
+
+
+    
+
+
+
+    <footer class="kits-footer">
+      <p>&copy; 2024 Football Kits Albania. All rights reserved. <br> Follow us on 
+        <a href="https://instagram.com/kits.alb" target="_blank" class="footer-link">Instagram</a>
+      </p>
+    </footer>
+
 
 </body>
 </html>
